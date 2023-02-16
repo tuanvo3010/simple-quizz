@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="shortcut icon" href="./img/quiz-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="quiz">
+            <div class="top-bar">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="time-box center border">
+                <p class="time">50s</p>
+            </div>
+
+            <div class="content">
+                <div class="question border">
+                    <div class="question-title center">Câu hỏi 1/5</div>
+                    <div class="question-content">
+
+                    </div>
+                </div>
+
+                <div class="functions">
+                    <div class="point-rule border center">
+                        <div>
+                            <p>
+                                Đúng: 100
+                            </p>
+                            <p>
+                                Sai: 50
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hint btn border center">50:50</div>
+
+                    <div class="points-box border center">
+                        <span class="points">0</span>
+
+                    </div>
+                </div>
+
+                <div class="choices-box">
+                    <div class="choice border" id="choice-1" onclick="checkResult(this)">
+                        <p></p>
+                    </div>
+
+                    <div class="choice border" id="choice-2" onclick="checkResult(this)">
+                        <p></p>
+                    </div>
+
+                    <div class="choice border" id="choice-3" onclick="checkResult(this)">
+                        <p></p>
+                    </div>
+
+                    <div class="choice border" id="choice-4" onclick="checkResult(this)">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar center">
+                <button class="btn btn-next border">Câu tiếp theo</button>
+                <button class="btn btn-submit border hide">Kết thúc</button>
+            </div>
+        </div>
+
+        <!-- End Game -->
+        <div class="end-game modal hide">
+            <div class="end-inner center">
+                <h1 class="end-title">Hoàn thành Quiz !</h1>
+                <p class="end-result">Bạn không trả lời được câu hỏi nào.</p>
+                <p class="points-result points-box center">
+                    <span class="points">0</span>
+                </p>
+                <button class="btn border play-again">Chơi lại</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio hide">
+        <audio class="right-sound">
+            <source src="./audio/right-sound.mp3" type="audio/mpeg" />
+        </audio>
+        <audio class="wrong-sound">
+            <source src="./audio/wrong-sound.mp3" type="audio/mpeg" />
+        </audio>
+        <audio class="hint-sound">
+            <source src="./audio/hint-sound.mp3" type="audio/mpeg" />
+        </audio>
+        <audio class="loser-sound">
+            <source src="./audio/loser-sound.mp3" type="audio/mpeg" />
+        </audio>
+        <audio class="winner-sound">
+            <source src="./audio/winner-sound.mp3" type="audio/mpeg" />
+        </audio>
+        <audio class="end-sound">
+            <source src="./audio/end-sound.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
